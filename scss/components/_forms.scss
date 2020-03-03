@@ -1,0 +1,656 @@
+.form_control {
+	margin: 0;
+	width: 100%;
+	height: 40px;
+	border: none;
+	outline: none;
+	font-size: 1.4rem;
+	line-height: 2rem;
+	color: $color-base;
+	padding: 10px 15px;
+	background: #ffffff;
+	display: inline-block;
+	vertical-align: middle;
+	box-shadow:
+			0px 1px 3px rgba(9, 59, 86, 0.2),
+			0px 1px 1px rgba(9, 59, 86, 0.14),
+			0px 2px 1px rgba(9, 59, 86, 0.12);
+	@include border-radius(8px);
+	@include placeholder($color-base);
+
+	&::-ms-clear {
+		display: none;
+		width: 0;
+		height: 0;
+	}
+
+	&:focus,
+	&:active {
+		outline: none;
+		@include placeholder(transparent);
+	}
+	&.error {
+		border-color: #FF3840;
+	}
+}
+
+.form_date {
+	background: #fff url("../img/icon__calendar.png") 100% 50% no-repeat;
+}
+
+.form_search {
+	width: 100%;
+	background: #fff;
+	position: relative;
+	box-shadow:
+			0px 1px 3px rgba(9, 59, 86, 0.2),
+			0px 1px 1px rgba(9, 59, 86, 0.14),
+			0px 2px 1px rgba(9, 59, 86, 0.12);
+	@include border-radius(8px);
+
+	&__input {
+		margin: 0;
+		width: 100%;
+		height: 40px;
+		border: none;
+		outline: none;
+		display: block;
+		font-size: 1.4rem;
+		line-height: 2rem;
+		color: $color-base;
+		background: transparent;
+		vertical-align: middle;
+		padding: 10px 40px 10px 15px;
+		@include border-radius(8px);
+		@include placeholder($color-black);
+
+		&::-ms-clear {
+			display: none;
+			width: 0;
+			height: 0;
+		}
+
+		&:focus,
+		&:active {
+			outline: none;
+			@include placeholder(transparent);
+		}
+	}
+
+	&__button {
+		top: 50%;
+		right: 15px;
+		padding: 0;
+		z-index: 10;
+		width: 14px;
+		height: 14px;
+		font-size: 0;
+		line-height: 0;
+		border: none;
+		outline: none;
+		margin: -7px 0 0 0;
+		position: absolute;
+		display: inline-block;
+		background: transparent;
+
+		.ico_svg {
+			fill: #B2B2B2;
+		}
+
+		&:hover {
+
+			.ico_svg {
+				fill: $color-blue;
+			}
+		}
+	}
+}
+
+.form_xxs {
+	margin: 0 auto;
+	width: 125px;
+}
+
+
+input:-webkit-autofill {
+	color: #ffffff !important;
+}
+
+.form_xs {
+	width: 140px;
+	margin: 0 auto;
+}
+
+.form_group {
+	margin-bottom: 12px;
+}
+
+.file {
+
+	&__name {
+		font-weight: 500;
+		font-size: 13px;
+		line-height: 15px;
+		margin-bottom: 5px;
+	}
+
+	&__form {
+		cursor: pointer;
+		font-weight: 400;
+		font-size: 1.3rem;
+		line-height: 1.8rem;
+		position: relative;
+		padding-left: 24px;
+		display: inline-block;
+
+		i {
+			left: 0;
+			top: 50%;
+			width: 19px;
+			height: 18px;
+			font-size: 0;
+			line-height: 0;
+			margin-top: -9px;
+			position: absolute;
+			display: inline-block;
+		}
+
+		input {
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			opacity: 0;
+			visibility: hidden;
+			position: absolute;
+		}
+	}
+}
+
+.form_main {
+	margin: 0;
+	width: 100%;
+	height: 46px;
+	outline: none;
+	font-size: 1.3rem;
+	line-height: 2rem;
+	color: #4F5355;
+	padding: 12px 14px;
+	background: #ffffff;
+	display: inline-block;
+	vertical-align: middle;
+	border: 1px solid rgba(79, 83, 85, 0.5);
+	@include border-radius(5px);
+	@include placeholder(#4F5355);
+
+	&::-ms-clear {
+		display: none;
+		width: 0;
+		height: 0;
+	}
+
+	&:focus,
+	&:active {
+		outline: none;
+		@include placeholder(transparent);
+	}
+	&.error {
+		border-color: #FF3840;
+	}
+}
+
+textarea.form_main {
+	height: auto;
+}
+
+.raty {
+	font-size: 0;
+	line-height: 0;
+
+	i {
+		padding: 0 2px;
+	}
+}
+
+.select {
+	z-index: 50;
+	position: relative;
+
+	&_xs {
+		width: 140px;
+	}
+
+	&.open {
+		z-index: 100;
+
+		.select__label {
+			@include border-radius(8px 8px 0 0);
+
+			i {
+				@include rotate(180deg);
+			}
+		}
+
+		.select__dropdown {
+			opacity: 1;
+			z-index: 100;
+			visibility: visible;
+		}
+	}
+
+	&__label {
+		width: 100%;
+		height: 40px;
+		cursor: pointer;
+		color: $color-base;
+		padding: 10px 30px 10px 20px;
+		background: #fff;
+		box-shadow:
+				0px 1px 3px rgba(9, 59, 86, 0.2),
+				0px 1px 1px rgba(9, 59, 86, 0.14),
+				0px 2px 1px rgba(9, 59, 86, 0.12);
+		@include border-radius(8px);
+		@include flexbox();
+		@include align-items(center);
+
+		span {
+			width: 100%;
+			padding-right: 10px;
+			overflow: hidden;
+			white-space: nowrap;
+			display: inline-block;
+			text-overflow: ellipsis;
+		}
+
+
+		i {
+			top: 50%;
+			right: 15px;
+			height: 8px;
+			font-size: 0;
+			line-height: 0;
+			margin-top: -4px;
+			position: absolute;
+			display: inline-block;
+		}
+
+		.ico_svg {
+			color: $color-base;
+		}
+
+		&.text_right {
+			padding-left: 10px;
+		}
+	}
+
+	&__content {
+		max-height: 300px;
+	}
+
+	&__dropdown {
+		left: 0;
+		top: 100%;
+		opacity: 0;
+		width: 100%;
+		//	overflow: hidden;
+		background: #fff;
+		visibility: hidden;
+		position: absolute;
+		box-shadow:
+				0px 1px 3px rgba(9, 59, 86, 0.2),
+				0px 1px 1px rgba(9, 59, 86, 0.14),
+				0px 2px 1px rgba(9, 59, 86, 0.12),
+				0px 8px 16px rgba(131, 131, 131, 0.4);
+		@include border-radius(0 0 8px 8px);
+
+		&:before {
+			left: 0;
+			right: 0;
+			top: -5px;
+			z-index: 120;
+			content: '';
+			height: 5px;
+			display: block;
+			background: #fff;
+			position: absolute;
+		}
+
+		&_top {
+
+		}
+	}
+
+	&__search {
+		width: 100%;
+		height: 30px;
+		display: block;
+		position: relative;
+		background: #F4F4F4;
+
+		&_input {
+			margin: 0;
+			width: 100%;
+			height: 30px;
+			border: none;
+			outline: none;
+			display: block;
+			font-size: 1.3rem;
+			line-height: 2rem;
+			color: #4F5355;
+			background: transparent;
+			vertical-align: middle;
+			padding: 5px 40px 5px 15px;
+			@include border-radius(8px);
+			@include placeholder(#4F5355);
+
+			&::-ms-clear {
+				display: none;
+				width: 0;
+				height: 0;
+			}
+
+			&:focus,
+			&:active {
+				outline: none;
+				@include placeholder(transparent);
+			}
+		}
+
+		&_button {
+			top: 50%;
+			right: 15px;
+			padding: 0;
+			z-index: 10;
+			width: 14px;
+			height: 14px;
+			font-size: 0;
+			line-height: 0;
+			border: none;
+			outline: none;
+			margin: -7px 0 0 0;
+			position: absolute;
+			display: inline-block;
+			background: transparent;
+
+			.ico_svg {
+				fill: #B2B2B2;
+			}
+
+			&:hover {
+
+				.ico_svg {
+					fill: $color-blue;
+				}
+			}
+		}
+	}
+
+	&__list {
+		margin: 0;
+		padding: 0;
+		font-size: 0;
+		line-height: 0;
+		list-style: none;
+
+		li {
+			width: 100%;
+			padding: 7px 15px;
+		}
+
+		.form_checkbox {
+
+			span {
+				max-width: 100%;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+			}
+		}
+	}
+
+	&__option {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		> li {
+			cursor: pointer;
+			font-size: 1.3rem;
+			line-height: 2rem;
+			padding: 5px 40px 5px 15px;
+
+			span {
+				display: block;
+				max-width: 100%;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+			}
+
+			&:hover {
+				background: #EDF4FA;
+			}
+		}
+	}
+
+	&__buttons {
+		margin: 0;
+		padding: 5px 9px;
+		list-style: none;
+		text-align: center;
+
+		> li {
+			width: 100%;
+			padding: 5px 7px;
+		}
+
+		.btn {
+			width: 100%;
+		}
+
+		&_inline {
+			@include flexbox();
+			@include align-items(center);
+
+			> li {
+				width: 50%;
+			}
+
+			.btn {
+				width: auto;
+			}
+		}
+	}
+
+	@media (max-width: $screen-md-max) {
+
+		&_top {
+
+			&.open {
+
+				.select__label {
+					@include border-radius(0 0 8px 8px);
+				}
+			}
+
+			.select__dropdown {
+				top: auto;
+				bottom: 100%;
+				@include border-radius(8px 8px 0 0);
+				box-shadow:
+						0px 0px 5px 0px rgba(9, 59, 86, 0.2),
+						0px 0px 5px 0px rgba(131, 131, 131, 0.4);
+
+				&:before {
+					top: 100%;
+				}
+			}
+		}
+	}
+}
+
+.form_checkbox {
+	font-size: 0;
+	line-height: 0;
+	font-weight: 400;
+	position: relative;
+	display: inline-block;
+
+	input[type="checkbox"] {
+		top: 0;
+		left: 0;
+		width: 0;
+		height: 0;
+		opacity: 0;
+		visibility: hidden;
+		position: absolute;
+	}
+
+	span {
+		min-height: 16px;
+		font-size: 1.3rem;
+		padding-left: 24px;
+		position: relative;
+		line-height: 1.6rem;
+		display: inline-block;
+
+		&:before {
+			top: 0;
+			left: 0;
+			z-index: 1;
+			content: '';
+			width: 16px;
+			height: 16px;
+			font-size: 0;
+			line-height: 0;
+			position: absolute;
+			display: inline-block;
+			border: 1px solid #C4C4C4;
+			@include border-radius(3px);
+		}
+
+		&:after {
+			top: 0;
+			left: 0;
+			opacity: 0;
+			z-index: 2;
+			content: '';
+			width: 16px;
+			height: 16px;
+			font-size: 0;
+			line-height: 0;
+			visibility: hidden;
+			position: absolute;
+			display: inline-block;
+			background: url("../img/icon__check.svg") 50% 50% no-repeat;
+			@include border-radius(3px);
+		}
+	}
+
+	input:checked + span {
+
+		&:before {
+			background: $color-blue;
+			border-color: $color-blue;
+		}
+
+		&:after {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}
+
+.form_radio {
+	font-size: 0;
+	line-height: 0;
+	font-weight: 400;
+	position: relative;
+	display: inline-block;
+
+	input[type="radio"] {
+		top: 0;
+		left: 0;
+		width: 0;
+		height: 0;
+		opacity: 0;
+		visibility: hidden;
+		position: absolute;
+	}
+
+	span {
+		min-height: 18px;
+		font-size: 1.4rem;
+		padding-left: 26px;
+		position: relative;
+		line-height: 1.8rem;
+		display: inline-block;
+
+		&:before {
+			top: 0;
+			left: 0;
+			z-index: 1;
+			content: '';
+			width: 18px;
+			height: 18px;
+			font-size: 0;
+			line-height: 0;
+			position: absolute;
+			display: inline-block;
+			border: 1px solid #C4C4C4;
+			@include border-radius(50%);
+		}
+
+		&:after {
+			top: 5px;
+			left: 5px;
+			z-index: 2;
+			content: '';
+			width: 8px;
+			height: 8px;
+			font-size: 0;
+			line-height: 0;
+			position: absolute;
+			display: inline-block;
+			background: #fff;
+			@include border-radius(50%);
+		}
+	}
+
+	input:checked + span {
+
+		&:before {
+			background: $color-blue;
+			border-color: $color-blue;
+		}
+	}
+}
+
+.form_inline {
+	padding: 0;
+	margin: 0 -10px;
+	list-style: none;
+	@include flexbox();
+	@include flex-wrap(wrap);
+	@include align-items(center);
+
+	> li {
+		padding: 0 10px;
+		white-space: nowrap;
+	}
+}
+
+
+.form_label {
+	font-weight: 400;
+	font-size: 1.3rem;
+	line-height: 120%;
+	margin-bottom: 7px;
+	@include flexbox();
+	@include flex-direction(column);
+	@include justify-content(flex-end);
+
+	span {
+		display: inline-block;
+	}
+}

@@ -1,0 +1,409 @@
+.calendar {
+
+	&__group {
+		z-index: 1;
+		position: relative;
+	}
+
+	&__item {
+		margin-bottom: 33px;
+
+		&:first-child {
+			display: none;
+		}
+
+		&:last-child {
+			display: none;
+		}
+	}
+
+	.xdsoft_datetimepicker {
+		margin: 0;
+		padding: 0;
+		border: none;
+	}
+
+	.xdsoft_datetimepicker,
+	.xdsoft_datepicker {
+		width: 100%;
+		margin-left: 0;
+	}
+
+	.xdsoft_datetimepicker.xdsoft_inline {
+		position: relative;
+	}
+
+	@media (min-width: $screen-sm-min) {
+
+		&__group {
+			@include flexbox();
+			@include justify-content(space-between);
+		}
+
+		&__item {
+			width: calc(50% - 10px);
+
+			&:first-child {
+				display: block;
+			}
+
+		}
+	}
+
+
+	@media (min-width: $screen-md-min) {
+
+	}
+
+	@media (min-width: 992px) {
+
+		&__item {
+			max-width: 400px;
+			width: calc(33.33% - 10px);
+
+			&:last-child {
+				display: block;
+			}
+
+		}
+	}
+
+	@media (min-width: $screen-lg-min) {
+
+		&__item {
+			width: calc(33.33% - 30px);
+		}
+	}
+}
+
+.xdsoft_datetimepicker .xdsoft_datepicker {
+	width: auto;
+	float: none;
+	margin-left: 0;
+}
+
+
+.xdsoft_datetimepicker {
+	padding: 0;
+	border: none;
+	z-index: 99999;
+	margin-top: 5px;
+	@include border-radius(8px);
+	box-shadow:
+			0px 1px 3px rgba(0, 0, 0, 0.2),
+			0px 1px 1px rgba(0, 0, 0, 0.14),
+			0px 2px 1px rgba(0, 0, 0, 0.12);
+
+	.xdsoft_monthpicker {
+		height: 57px;
+		padding: 10px;
+		background: $color-blue;
+		@include flexbox();
+		@include align-items(center);
+		@include justify-content(center);
+		@include border-radius(8px 8px 0 0);
+	}
+
+	.xdsoft_label {
+		float: none;
+		width: 120px;
+		height: 30px;
+		text-decoration: none !important;
+		padding: 4px 10px 4px 15px;
+		font-weight: 400;
+		font-size: 1.4rem;
+		line-height: 2rem;
+		background: #fff;
+		@include flexbox();
+		@include align-items(center);
+		@include justify-content(space-between);
+		box-shadow:
+				0px 1px 3px rgba(9, 59, 86, 0.2),
+				0px 1px 1px rgba(9, 59, 86, 0.14),
+				0px 2px 1px rgba(9, 59, 86, 0.12);
+		@include border-radius(7px);
+
+		span {
+			display: inline-block;
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: none !important;
+			}
+		}
+
+
+		&:hover {
+			text-decoration: none !important;
+		}
+
+
+		i {
+			margin-top: 2px;
+			opacity: 1;
+			font-size: 0;
+			line-height: 0;
+			width: 11px;
+			height: 7px;
+			background: url("../img/icon__arrow_down.svg") 50% 50% no-repeat;
+			background-size: cover;
+		}
+	}
+
+	.xdsoft_label>.xdsoft_select.xdsoft_monthselect {
+		right: 0;
+	}
+
+	.xdsoft_label>.xdsoft_select {
+		left: 0;
+		right: 0;
+		top: calc(100% + 2px);
+		width: 100%;
+		box-shadow:
+				0px 1px 3px rgba(9, 59, 86, 0.2),
+				0px 1px 1px rgba(9, 59, 86, 0.14),
+				0px 2px 1px rgba(9, 59, 86, 0.12);
+		@include border-radius(7px);
+	}
+
+	.xdsoft_month {
+		width: 120px;
+		text-align: left;
+	}
+
+	.xdsoft_year {
+		width: 120px;
+		padding-left: 30px;
+	}
+
+	.xdsoft_label>.xdsoft_select>div>.xdsoft_option {
+		padding-left: 15px;
+
+		&:hover {
+			color: $color-base;
+			background: #EDF4FA;
+		}
+	}
+
+	.xdsoft_year>.xdsoft_select>div>.xdsoft_option {
+		text-align: left;
+		padding-left: 30px;
+	}
+
+	&.xdsoft_inline {
+		width: 100%;
+		box-shadow:
+				0px 1px 3px rgba(0, 0, 0, 0.2),
+				0px 1px 1px rgba(0, 0, 0, 0.14),
+				0px 2px 1px rgba(0, 0, 0, 0.12);
+	}
+
+	.xdsoft_calendar {
+
+		td,
+		th {
+			font-size: 1.4rem;
+			font-weight: 400;
+			line-height: 2.1rem;
+			text-align: center;
+			border: none;
+			color: $color-base;
+		}
+
+		td {
+			padding: 1px;
+			background: transparent;
+
+			&:first-child {
+				padding-left: 10px;
+			}
+
+			&:last-child {
+				padding-right: 10px;
+			}
+
+			> div {
+				margin: 0 auto;
+				padding: 4px 0;
+				width: 31px;
+				height: 31px;
+				text-align: center;
+				border: 1px solid transparent;
+				@include border-radius(50%);
+			}
+
+			&.xdsoft_today {
+				color: $color-base;
+			}
+
+			&.xdsoft_default,
+			&.xdsoft_current {
+				font-weight: 400;
+				background: transparent;
+				@include box-shadow(none);
+				color: $color-green;
+
+
+				> div {
+					color: $color-green;
+					background: transparent;
+					border-color: $color-green;
+				}
+			}
+
+			&:hover {
+				background-color: transparent !important;
+
+				> div {
+					color: #fff;
+					background: $color-green;
+					border-color: $color-green;
+				}
+			}
+		}
+
+		th {
+			padding: 10px 2px;
+			background: #EDF4FA;
+
+			&:first-child {
+				padding-left: 10px;
+			}
+
+			&:last-child {
+				padding-right: 10px;
+			}
+
+			> div {
+				opacity: 0.4;
+			}
+		}
+
+
+		tbody {
+
+			tr {
+
+				&:first-child {
+
+					td {
+						padding-top: 18px;
+					}
+				}
+
+				&:last-child {
+
+					td {
+						padding-bottom: 19px;
+					}
+				}
+			}
+		}
+	}
+
+	@media (min-width: $screen-md-min) {
+		width: 400px;
+	}
+}
+
+
+
+.xdsoft_prev,
+.xdsoft_next,
+.xdsoft_today_button {
+	display: none !important;
+}
+
+.xdsoft_scrollbar {
+	width: 4px;
+	background: #D4DBE0;
+
+}
+
+.xdsoft_scrollbar>.xdsoft_scroller {
+	background: $color-blue !important;
+	@include border-radius(none);
+}
+
+.xdsoft_datetimepicker .xdsoft_label>.xdsoft_select>div>.xdsoft_option.xdsoft_current {
+	font-weight: 400;
+	color: #fff;
+	background: $color-blue;
+
+	&:hover {
+		color: #fff;
+		background: $color-blue;
+	}
+}
+
+
+.calendar_static {
+
+	.xdsoft_year {
+		display: none !important;
+	}
+
+	.xdsoft_select {
+		opacity: 0 !important;
+		visibility: hidden !important;
+		display: none !important;
+	}
+
+
+	.xdsoft_datetimepicker {
+
+		.xdsoft_label {
+			color: #fff;
+			font-weight: 600;
+			font-size: 16px;
+			box-shadow: none;
+			text-align: center;
+			background: transparent;
+			@include justify-content(center);
+
+			i {
+				opacity: 0 !important;
+				visibility: hidden !important;
+				display: none !important;
+			}
+		}
+	}
+}
+
+.calendar {
+
+	.xdsoft_today {
+
+		div {
+			position: relative;
+
+			&:before {
+				left: 50%;
+				opacity: 0;
+				visibility: hidden;
+				margin-left: -107px;
+				top: calc(100%);
+				width: 215px;
+				height: 59px;
+				color: #000;
+				padding: 15px 5px 0 5px;
+				content: 'Количество прогнозов - 124';
+				text-align: center;
+				position: absolute;
+				background: url("../img/union.png") 50% 0 no-repeat;
+				box-sizing: border-box;
+				font-weight: 600;
+				font-size: 1.2rem;
+				line-height: 2rem;
+			}
+
+			&:hover {
+
+				&:before {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+	}
+}

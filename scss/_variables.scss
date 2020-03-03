@@ -1,0 +1,62 @@
+// Color system
+
+$color-white:               #ffffff !default;
+$color-black:               #1A1A1A !default;
+$color-blue:                #0288D1 !default;
+$color-green:				#25C2B9 !default;
+$color-red:					#EF2323 !default;
+
+$color-base:                $color-black;
+
+// Fonts
+
+$font-family-base:          'Gilroy', Arial, sans-serif !default;
+$font-family-head:          'Gilroy', Arial, sans-serif !default;
+
+$font-size-reset:           10px;
+
+$font-size-base:            1.4rem !default;
+$font-size-lg:              ($font-size-base * 1.25) !default;
+$font-size-sm:              ($font-size-base * .875) !default;
+
+$font-weight-light:         300 !default;
+$font-weight-normal:        400 !default;
+$font-weight-bold:          700 !default;
+
+$font-weight-base:          $font-weight-normal !default;
+$line-height-base:          1.71428 !default;
+
+
+
+// Page
+
+$body-bg:                   $color-white !default;
+$body-color:                $color-black !default;
+
+
+// Grid
+$grid-columns: 12 !default; // Set number of columns in the grid
+
+
+$screen-xs-min:                 0;
+$screen-sm-min:                 576px !default;
+$screen-md-min:                 768px !default;
+$screen-lg-min:                 1200px !default;
+$screen-xl-min:                 1480px !default;
+
+
+$screen-xs-max:              ($screen-sm-min - 0.1) !default;
+$screen-sm-max:              ($screen-md-min - 0.1) !default;
+$screen-md-max:              ($screen-lg-min - 0.1) !default;
+$screen-lg-max:              ($screen-xl-min - 0.1) !default;
+
+
+$container-sm:               530px;
+$container-md:               750px;
+$container-lg:               1170px;
+$container-xl:               1450px;
+
+
+$gutter: 1.5rem !default; // Set gutter size
+
+

@@ -1,0 +1,6 @@
+.grid-editable.updated {
+    border: 2px solid mediumseagreen;
+}
+.grid-editable.error {
+    border: 2px solid red;
+}
