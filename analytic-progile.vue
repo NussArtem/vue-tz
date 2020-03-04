@@ -100,8 +100,14 @@
 </template>
 
 <script>
+    import axios from 'axios'
     export default {
         name: "analytic-progile",
+        data() {
+            return {
+                info: null
+            };
+        },
         mounted() {
             axios
                 .get(`http://finprognoz.double.systems/api/v1/analyst/profile?id=591
